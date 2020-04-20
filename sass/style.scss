@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'metropolis_bold';
+    src: url('Metropolis-Bold.otf');
+}
+@font-face {
+    font-family: 'metropolis';
+    src: url('Metropolis-Regular.otf');
+}
+
+$title-font: metropolis_bold;
+$primary-font: metropolis;
+
+$primary-color: #579c87;
+$text-color : #fdcb46;
+
+
+body {
+    position: relative;
+    width: auto;
+    margin: auto;
+    width: 100%;
+}
+
+header {
+    display: block;
+    width: 100%;
+    padding: 2% 0 2% 0;
+    margin: auto;
+    background-color: $primary-color;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    padding: 1% 0 1% 0;
+    margin-bottom: 0px;
+    background-color: $primary-color;
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    position: fixed;
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+}
+
+.footer__legal {
+    width: auto;
+    text-align: left;
+    margin: auto 0 auto 3%;
+}
+.footer__contact {
+    width: auto;
+    text-align: right;
+    margin: auto 3% auto 0;
+}
+
+h1 {
+    color: $text-color;
+    text-align: center;
+    font-family: $title-font;
+    font-size: 4.5rem;
+    letter-spacing: -3px;
+}
+
+span {
+    color: $text-color;
+}
+
+section {
+    margin-bottom: 5%;
+}
+
+.main {
+    display: grid;
+    height: auto;
+}
+
+.restaurants {
+    display: grid;
+    width: 1000px;
+    margin: 25px auto 25px auto;
+    grid-template-columns: 50% 50%;
+}
+
+.restaurant__indexA, .restaurant__indexB, .restaurant__indexC, .restaurant__indexD {
+    width: 450px;
+    height: 650px;
+    margin: 5% auto 5% auto;
+    box-shadow: 0px 0px 5px 5px #cccccc;
+}
+
+.restaurant__indexA {
+    display: block;
+    background-color: pink;
+    cursor: pointer;
+    text-align: center;
+    background: url(menu1.html) no repeat;
+    h2 {
+        margin-top: 50%;
+    }
+}
+
+.restaurant__indexB {
+    display: block;
+    background: url(menu2.html) no repeat;
+    cursor: pointer;
+    background-color: plum;
+    text-align: center;
+    h2 {
+        margin-top: 50%;
+    }
+}
+
+.restaurant__indexC {
+    display: block;
+    background: url(menu3.html) no repeat;
+    background-color: grey;
+    cursor: pointer;
+    text-align: center;
+    h2 {
+        margin-top: 50%;
+    }
+}
+
+.restaurant__indexD {
+    display: block;
+    background: url(menu4.html) no repeat;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    h2 {
+        margin-top: 50%;
+    }
+}
+
+.btn {
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    background-color: $primary-color;
+    margin: 2% auto 5% auto;
+    padding: 0 45px 0 45px;
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    .btn--comingsoon {
+        text-align: center;
+        vertical-align: center;
+        color: $text-color;
+    }
+}
+
+.menu__title {
+    text-align: center;
+}
+
+.bottom__title {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.menu {
+    display: grid;
+    background-color: pink;
+    margin: 2% 8% 2% 8%;
+    padding: 5% 7% 5% 7%;
+    box-shadow: 0px 0px 2px 2px grey;
+    text-align: left;
+    li {
+        list-style: none;
+    }
+}
+
+.feuille {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.prix {
+    text-align: right;
+}
+
+.liste-g {
+    margin-right: 50px;
+}
