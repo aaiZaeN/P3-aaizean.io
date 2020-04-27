@@ -82,67 +82,36 @@ section {
 .restaurants {
     display: grid;
     width: 1000px;
-    margin: 25px auto 25px auto;
-    grid-template-columns: 50% 50%;
+    margin: 45px auto 0 auto;
+    grid-template-columns: 50% 50%; 
+    
 }
 
-.restaurant__indexA, .restaurant__indexB, .restaurant__indexC, .restaurant__indexD {
-    width: 450px;
-    height: 650px;
-    margin: 5% auto 5% auto;
+
+
+.image--1, .image--2, .image--3, .image--4 {
+    display: block;
+    width: 400px;
+    height: 500px;
     box-shadow: 0px 0px 5px 5px #cccccc;
+    margin: 0 auto 85px auto;
+    
 }
 
-.restaurant__indexA {
-    display: block;
-    background-color: pink;
-    cursor: pointer;
-    text-align: center;
-    background: url(menu1.html) no repeat;
-    h2 {
-        margin-top: 50%;
-    }
-}
 
-.restaurant__indexB {
-    display: block;
-    background: url(menu2.html) no repeat;
-    cursor: pointer;
-    background-color: plum;
-    text-align: center;
-    h2 {
-        margin-top: 50%;
-    }
-}
 
-.restaurant__indexC {
-    display: block;
-    background: url(menu3.html) no repeat;
-    background-color: grey;
-    cursor: pointer;
-    text-align: center;
-    h2 {
-        margin-top: 50%;
-    }
-}
 
-.restaurant__indexD {
-    display: block;
-    background: url(menu4.html) no repeat;
-    background-color: white;
-    cursor: pointer;
-    text-align: center;
-    h2 {
-        margin-top: 50%;
-    }
-}
+
+
+
+
 
 .btn {
     width: auto;
     height: auto;
     border-radius: 15px;
     background-color: $primary-color;
-    margin: 2% auto 5% auto;
+    margin: 0 auto 50px auto;
     padding: 0 45px 0 45px;
     font-family: $primary-font;
     font-size: 1.5rem;
@@ -163,9 +132,9 @@ section {
 }
 
 .menu {
-    display: grid;
+    width: auto;
     background-color: pink;
-    margin: 2% 8% 2% 8%;
+    margin: auto 8% auto 8%;
     padding: 5% 7% 5% 7%;
     box-shadow: 0px 0px 2px 2px grey;
     text-align: left;
