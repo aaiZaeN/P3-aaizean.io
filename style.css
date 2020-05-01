@@ -1,31 +1,82 @@
+@font-face {
+  font-family: "metropolis_bold";
+  src: url("Metropolis-Bold.otf");
+}
+@font-face {
+  font-family: "metropolis";
+  src: url("Metropolis-Regular.otf");
+}
+@font-face {
+  font-family: "devonshire";
+  src: url("Devonshire-Regular.ttf");
+}
+@font-face {
+  font-family: "croissantOne";
+  src: url("CroissantOne-Regular.ttf");
+}
+@font-face {
+  font-family: "kaushan";
+  src: url("KaushanScript-Regular.ttf");
+}
+@font-face {
+  font-family: "dancing";
+  src: url("DancingScript-VariableFont_wght.ttf");
+}
 body {
+  position: relative;
   width: auto;
   margin: auto;
-}
+  width: 100%;
 
 header {
   display: block;
   width: 100%;
-  padding: 4% 0 4% 0;
-  margin: auto;
-  background-color: #579c87;
-}
+  padding: 2% 0 2% 0;
 
 footer {
-  position: absolute;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: relative;
+  bottom: 0px;
   width: 100%;
-  padding: 3% 0 3% 0;
+  padding: 1% 0 1% 0;
   margin-bottom: 0px;
   background-color: #579c87;
+  font-family: metropolis;
+  font-size: 1.5rem;
+  position: fixed;
+}
+footer a {
+  text-decoration: none;
+  color: #fdcb46;
+}
+
+.footer__legal {
+  width: auto;
+  text-align: left;
+  margin: auto 0 auto 3%;
+}
+
+.footer__contact {
+  width: auto;
+  text-align: right;
+  margin: auto 3% auto 0;
 }
 
 h1 {
   color: #fdcb46;
-  text-align: center;
+  text-align: 
+  font-family: metropolis_bold;
+  font-size: 4.5rem;
+  letter-spacing: -3px;
 }
 
 span {
   color: #fdcb46;
+}
+
+section {
+  margin-bottom: 5%;
 }
 
 .main {
@@ -33,6 +84,31 @@ span {
   height: auto;
 }
 
+.restaurants {
+  display: grid;
+  width: 1000px;
+  margin: 45px auto 0 auto;
+  grid-template-columns: 50% 50%;
+}
+
+.image--1, .image--2, .image--3, .image--4 {
+  display: block;
+  width: 400px;
+  height: 500px;
+  box-shadow: 0px 0px 5px 5px #cccccc;
+  margin: 0 auto 85px auto;
+}
+
+.btn {
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  background-color: #579c87;
+  margin: 0 auto 50px auto;
+  padding: 0 45px 0 45px;
+  font-family: metropolis;
+  font-size: 1.5rem;
+  
 .menu {
   display: grid;
   width: 1000px;
@@ -60,6 +136,83 @@ span {
   text-align: center;
   vertical-align: center;
   color: #fdcb46;
+}
+
+
+.menu__title {
+  text-align: center;
+}
+
+.bottom__title {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.menu, .menu1, .menu2, .menu3, .menu4 {
+  width: auto;
+  margin: auto auto auto auto;
+  padding: 5% 7% 5% 7%;
+  box-shadow: 0px 0px 5px 5px #cccccc;
+  text-align: left;
+}
+.menu li, .menu1 li, .menu2 li, .menu3 li, .menu4 li {
+  list-style: none;
+}
+
+.feuille {
+  display: flex;
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.prix {
+  text-align: right;
+  margin: 0 0 0 auto;
+}
+
+.liste-g {
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.trait__title {
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+}
+
+.trait {
+  width: 200px;
+  margin: auto 2% auto 2%;
+}
+
+.musicalnote {
+  width: 15%;
+  margin: 0 auto 0 41%;
+}
+
+.image--1 {
+  display: block;
+}
+
+.menu1 {
+  font-family: devonshire;
+  font-size: 1.5em;
+  background-color: #FCDFDB;
+}
+
+.menu2 {
+  font-family: croissantOne;
+  background-color: #fff5fe;
+}
+
+.menu3 {
+  font-family: dancing;
+  font-size: 1.5em;
+  background-color: #eceeee;
+}
+
+.menu4 {
+  font-family: kaushan;
 }
 
 /*# sourceMappingURL=style.css.map */
