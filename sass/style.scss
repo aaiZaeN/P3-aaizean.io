@@ -6,13 +6,30 @@
     font-family: 'metropolis';
     src: url('Metropolis-Regular.otf');
 }
+@font-face {
+    font-family: 'devonshire';
+    src: url('Devonshire-Regular.ttf')
+}
+@font-face {
+    font-family: 'croissantOne';
+    src: url('CroissantOne-Regular.ttf')
+}
+@font-face {
+    font-family: 'kaushan';
+    src: url('KaushanScript-Regular.ttf');
+}
+@font-face {
+    font-family: 'dancing';
+    src: url('DancingScript-VariableFont_wght.ttf');
+}
+
+
 
 $title-font: metropolis_bold;
 $primary-font: metropolis;
 
 $primary-color: #579c87;
 $text-color : #fdcb46;
-
 
 body {
     position: relative;
@@ -98,14 +115,6 @@ section {
     
 }
 
-
-
-
-
-
-
-
-
 .btn {
     width: auto;
     height: auto;
@@ -131,12 +140,11 @@ section {
     text-align: center;
 }
 
-.menu {
+.menu, .menu1, .menu2, .menu3, .menu4 {
     width: auto;
-    background-color: pink;
-    margin: auto 8% auto 8%;
+    margin: auto auto auto auto;
     padding: 5% 7% 5% 7%;
-    box-shadow: 0px 0px 2px 2px grey;
+    box-shadow: 0px 0px 5px 5px #cccccc;
     text-align: left;
     li {
         list-style: none;
@@ -145,13 +153,56 @@ section {
 
 .feuille {
     display: flex;
-    flex-flow: row wrap;
+    margin: 0 auto 0 0;
+    text-align: left;
 }
 
 .prix {
     text-align: right;
+    margin: 0 0 0 auto;
 }
 
 .liste-g {
-    margin-right: 50px;
+    margin: 0 auto 0 0;
+    text-align: left;
+}
+
+.trait__title {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+}
+
+.trait {
+    width: 200px;
+    margin: auto 2% auto 2%;
+}
+
+.musicalnote {
+    width: 15%;
+    margin: 0 auto 0 41%;
+}
+
+.image--1 {
+    display: block;
+}
+
+.menu1 {
+    font-family: devonshire;
+    font-size: 1.5em;
+    background-color: #FCDFDB;
+}
+
+.menu2 {
+    font-family: croissantOne;
+    background-color: #fff5fe;
+}
+
+.menu3 {
+    font-family: dancing;
+    font-size: 1.5em;
+    background-color: #eceeee;
+}
+
+.menu4 {
+    font-family: kaushan;
 }
