@@ -195,4 +195,17 @@ section {
   font-family: kaushan;
 }
 
+@media all and (max-width: 800px) {
+  .restaurants {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto 50px auto;
+  }
+
+  .image--1, .image--2, .image--3, .image--4 {
+    margin: 50px auto 50px auto;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
