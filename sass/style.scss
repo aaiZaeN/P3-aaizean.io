@@ -4,8 +4,29 @@
 }
 @font-face {
     font-family: 'metropolis';
-    src: url('Metropolis-Regular.otf');
+    src: url('polices/Metropolis-Regular.otf');
 }
+<<<<<<< Updated upstream
+=======
+@font-face {
+    font-family: 'devonshire';
+    src: url('polices/Devonshire-Regular.ttf')
+}
+@font-face {
+    font-family: 'croissantOne';
+    src: url('polices/CroissantOne-Regular.ttf')
+}
+@font-face {
+    font-family: 'kaushan';
+    src: url('polices/KaushanScript-Regular.ttf');
+}
+@font-face {
+    font-family: 'dancing';
+    src: url('polices/DancingScript-VariableFont_wght.ttf');
+}
+
+
+>>>>>>> Stashed changes
 
 $title-font: metropolis_bold;
 $primary-font: metropolis;
