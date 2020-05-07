@@ -116,6 +116,98 @@ section {
   grid-template-columns: 50% 50%;
 }
 
+.restaurant__indexA, .restaurant__indexB, .restaurant__indexC, .restaurant__indexD {
+  display: block;
+  width: 400px;
+  height: 500px;
+  box-shadow: 0px 0px 5px 5px #cccccc;
+  margin: 0 auto 85px auto;
+}
+
+.restaurant__indexA {
+  background-color: #FCDFDB;
+}
+
+.restaurant__indexB {
+  background-color: #fff5fe;
+}
+
+.restaurant__indexC {
+  background-color: #eceeee;
+}
+
+.indexA__name {
+  color: #582F34;
+  font-size: 3em;
+  font-family: devonshire;
+}
+
+.indexA__menu {
+  color: #582F34;
+  font-size: 3em;
+}
+
+.bloc__indexA {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 85px;
+}
+
+.indexB__name {
+  color: #582F34;
+  font-size: 1.8em;
+  font-family: croissantOne;
+}
+
+.indexB__menu {
+  color: #582F34;
+  font-size: 3em;
+}
+
+.bloc__indexB {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.indexC__name {
+  color: #582F34;
+  font-size: 2.5em;
+  font-family: dancing;
+}
+
+.indexC__menu {
+  color: #582F34;
+  font-size: 3em;
+}
+
+.bloc__indexC {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.indexD__name {
+  color: #582F34;
+  font-size: 2.5em;
+  font-family: kaushan;
+}
+
+.indexD__menu {
+  color: #582F34;
+  font-size: 3em;
+}
+
+.bloc__indexD {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 150px;
+}
+
 .image--1, .image--2, .image--3, .image--4 {
   display: block;
   width: 400px;
@@ -152,13 +244,14 @@ section {
 
 .menu__title {
   text-align: center;
+  margin: 0 10px 0 10px;
 }
 
 .menu__title {
   color: inherit;
   text-decoration: none;
   background: linear-gradient(to top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 10%, transparent 10.01%) no-repeat left bottom/0 100%;
-  transition: background-size 0.5s;
+  transition: background-size 0.9s;
 }
 
 .menu__title:hover {
@@ -183,8 +276,9 @@ section {
 
 .feuille {
   display: flex;
+  width: 100%;
   margin: 0 auto 0 0;
-  text-align: left;
+  text-align: center;
 }
 
 .prix {
@@ -193,18 +287,20 @@ section {
 }
 
 .liste-g {
-  margin: 0 auto 0 0;
+  margin: 0 auto 0 -40px;
   text-align: left;
 }
 
 .trait__title {
-  display: grid;
-  grid-template-columns: 35% 30% 35%;
+  display: flex;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  justify-content: space-between;
 }
 
 .trait {
   width: 200px;
-  margin: auto 2% auto 2%;
+  margin: auto 0 auto 0;
 }
 
 .musicalnote {
@@ -220,11 +316,13 @@ section {
   font-family: devonshire;
   font-size: 1.5em;
   background-color: #FCDFDB;
+  color: #582F34;
 }
 
 .menu2 {
   font-family: croissantOne;
   background-color: #fff5fe;
+  color: repeating-linear-gradient(red, yellow 10%, green 20%);
 }
 
 .menu3 {
@@ -235,6 +333,15 @@ section {
 
 .menu4 {
   font-family: kaushan;
+}
+
+.trait2.png {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.musicalnote__index {
+  width: 85px;
+  margin: 0 auto 0 auto;
 }
 
 @media all and (max-width: 800px) {
