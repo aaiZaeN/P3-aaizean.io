@@ -38,8 +38,9 @@ header {
 }
 
 footer {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   position: relative;
   bottom: 0px;
   width: 100%;
@@ -56,8 +57,6 @@ footer a {
 }
 
 .footer__legal {
-  width: auto;
-  text-align: left;
   margin: auto 0 auto 3%;
 }
 
@@ -83,8 +82,6 @@ footer a {
   }
 }
 .footer__contact {
-  width: auto;
-  text-align: right;
   margin: auto 3% auto 0;
 }
 
@@ -182,6 +179,9 @@ section {
   text-align: center;
   margin-top: 85px;
 }
+.bloc__indexA a {
+  text-decoration: none;
+}
 
 .indexB__name {
   color: #582F34;
@@ -199,6 +199,9 @@ section {
   flex-direction: column;
   text-align: center;
   margin-top: 150px;
+}
+.bloc__indexB a {
+  text-decoration: none;
 }
 
 .indexC__name {
@@ -218,6 +221,9 @@ section {
   text-align: center;
   margin-top: 150px;
 }
+.bloc__indexC a {
+  text-decoration: none;
+}
 
 .indexD__name {
   color: #582F34;
@@ -235,6 +241,9 @@ section {
   flex-direction: column;
   text-align: center;
   margin-top: 150px;
+}
+.bloc__indexD a {
+  text-decoration: none;
 }
 
 .image--1, .image--2, .image--3, .image--4 {

@@ -47,8 +47,9 @@ header {
 }
 
 footer {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: relative;
     bottom: 0px;
     width: 100%;
@@ -65,8 +66,6 @@ footer {
 }
 
 .footer__legal {
-    width: auto;
-    text-align: left;
     margin: auto 0 auto 3%;
 } 
 
@@ -96,8 +95,6 @@ footer {
   }
 
 .footer__contact {
-    width: auto;
-    text-align: right;
     margin: auto 3% auto 0;
 }
 
@@ -195,7 +192,10 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 85px;    
+    margin-top: 85px;  
+    a {
+        text-decoration: none;
+    }  
 }
 
 .indexB__name {
@@ -213,7 +213,10 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 150px;    
+    margin-top: 150px; 
+    a {
+        text-decoration: none;
+    }     
 }
 
 .indexC__name {
@@ -231,7 +234,10 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 150px;    
+    margin-top: 150px;   
+    a {
+        text-decoration: none;
+    }   
 }
 
 .indexD__name {
@@ -249,7 +255,10 @@ section {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 150px;    
+    margin-top: 150px;  
+    a {
+        text-decoration: none;
+    }    
 }
 
 
