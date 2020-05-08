@@ -22,6 +22,10 @@
     font-family: 'dancing';
     src: url('DancingScript-VariableFont_wght.ttf');
 }
+@font-face {
+    font-family: 'letters';
+    src: url('Letters for Learners.ttf');
+}
 
 
 
@@ -186,6 +190,7 @@ section {
 .indexA__menu {
     color: #582F34;
     font-size: 3em;
+    font-family: letters;
 }
 
 .bloc__indexA {
@@ -202,11 +207,16 @@ section {
     color: #582F34;
     font-size: 1.8em;
     font-family: croissantOne;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+  
 
 .indexB__menu {
     color: #582F34;
     font-size: 3em;
+    font-family: letters;
 }
 
 .bloc__indexB {
@@ -223,11 +233,15 @@ section {
     color: #582F34;
     font-size: 2.5em;
     font-family: dancing;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .indexC__menu {
     color: #582F34;
     font-size: 3em;
+    font-family: letters;
 }
 
 .bloc__indexC {
@@ -244,11 +258,15 @@ section {
     color: #582F34;
     font-size: 2.5em;
     font-family: kaushan;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .indexD__menu {
     color: #582F34;
     font-size: 3em;
+    font-family: letters;
 }
 
 .bloc__indexD {
@@ -289,11 +307,41 @@ section {
     padding: 0 45px 0 45px;
     font-family: $primary-font;
     font-size: 1.5rem;
-    .btn--comingsoon {
-        text-align: center;
-        vertical-align: center;
-        color: $text-color;
+}
+.btn--comingsoon {
+    text-align: center;
+    color: $text-color;
+    span {
+        padding: 0px;
     }
+}
+
+.point {
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    height: 200px;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    width: 200px;
+}
+.bounce-6 {
+    animation-name: bounce-6;
+    animation-timing-function: ease;
+}
+@keyframes bounce-6 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+
+.menu__title--top {
+    margin: 80px auto 50px auto;
+    font-size: 2em;
 }
 
 .menu__title {
@@ -301,17 +349,33 @@ section {
     margin: 0 10px 0 10px;
 }
 
-.menu__title {
+.title__bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.category__title {
     color: inherit;
     text-decoration: none;
-    background: linear-gradient(to top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
     transition: background-size .9s;
   }
   
-  .menu__title:hover {
+  .category__title:hover {
     background-size: 100% 100%;
   }
 
+.category__title--orange, .liste-orange, .prix_orange  {
+    color: #cc6600;
+}  
+
+.category__title--purple, .liste-purple, .prix_purple {
+    color: #996699;
+}
+
+.category__title--blue, .liste-blue, .prix_blue {
+    color: #6633cc;
+}
 
 .bottom__title {
     margin-top: 10%;
@@ -341,7 +405,7 @@ section {
     margin: 0 0 0 auto;
 }
 
-.liste-g {
+.liste-g, .liste-orange, .liste-purple, .liste-blue {
     margin: 0 auto 0 -40px;
     text-align: left;
     
@@ -355,10 +419,19 @@ section {
     
 }
 
+
 .trait {
     width: 200px;
     margin: auto 0 auto 0;
 }
+
+.trait__right {
+    width: 200px;
+    margin: auto 0 auto 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 
 .musicalnote {
     width: 15%;
