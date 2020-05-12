@@ -22,6 +22,10 @@
     font-family: 'dancing';
     src: url('DancingScript-VariableFont_wght.ttf');
 }
+@font-face {
+    font-family: 'letters';
+    src: url('Letters for Learners.ttf');
+}
 
 
 
@@ -123,8 +127,7 @@ section {
     display: grid;
     width: 1000px;
     margin: 45px auto 0 auto;
-    grid-template-columns: 50% 50%; 
-    
+    grid-template-columns: 50% 50%;     
 }
 
 .restaurant__indexA, .restaurant__indexB, .restaurant__indexC, .restaurant__indexD {
@@ -186,6 +189,7 @@ section {
 .indexA__menu {
     color: #582F34;
     font-size: 3em;
+    font-family: letters;
 }
 
 .bloc__indexA {
@@ -202,11 +206,16 @@ section {
     color: #582F34;
     font-size: 1.8em;
     font-family: croissantOne;
+    background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+  
 
 .indexB__menu {
-    color: #582F34;
+    color: #cc6600;
     font-size: 3em;
+    font-family: letters;
 }
 
 .bloc__indexB {
@@ -223,11 +232,15 @@ section {
     color: #582F34;
     font-size: 2.5em;
     font-family: dancing;
+    background: linear-gradient(to right, #0431df 0%, #0887fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .indexC__menu {
-    color: #582F34;
+    color: #0887fb;
     font-size: 3em;
+    font-family: letters;
 }
 
 .bloc__indexC {
@@ -244,11 +257,15 @@ section {
     color: #582F34;
     font-size: 2.5em;
     font-family: kaushan;
+    background: linear-gradient(to right, #3d9339 0%, #bfff7e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .indexD__menu {
-    color: #582F34;
+    color: #72bf56;
     font-size: 3em;
+    font-family: letters;
 }
 
 .bloc__indexD {
@@ -281,41 +298,140 @@ section {
 }
 
 .btn {
-    width: auto;
-    height: auto;
+    display: flex;
+    width: 150px;
+    height: 50px;
     border-radius: 15px;
     background-color: $primary-color;
     margin: 0 auto 50px auto;
     padding: 0 45px 0 45px;
     font-family: $primary-font;
     font-size: 1.5rem;
-    .btn--comingsoon {
-        text-align: center;
-        vertical-align: center;
-        color: $text-color;
-    }
 }
 
-.menu__title {
+.btn--comingsoon {
     text-align: center;
-    margin: 0 10px 0 10px;
+    margin-top: 15px;
+    color: $text-color;
 }
 
-.menu__title {
+
+.pointA, .pointC, .pointB {    
+    align-self: flex-end;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    height: 20px;
+    margin: 0 auto 15px auto;
+    transform-origin: bottom;
+    width: 20px;
+}
+.bounce-6 {
+    animation-name: bounce-6;
+    animation-timing-function: ease;
+}
+@keyframes bounce-6 {
+        0%   { transform: translateY(-7px); }
+        25%  { transform: translateY(-4px)}
+        50%  { transform: translateY(0); }
+        75%  { transform: translateY(-4px);}
+        100% { transform: translateY(-7px); }
+}
+
+.bounce-7 {
+    animation-name: bounce-7;
+    animation-timing-function: ease;
+}
+@keyframes bounce-7 {
+        0%   { transform: translateY(-4px); }
+        25%  { transform: translateY(-7px)}
+        50%  { transform: translateY(-4px); }
+        75%  { transform: translateY(0);}
+        100% { transform: translateY(-4px); }
+}
+
+.bounce-8 {
+    animation-name: bounce-8;
+    animation-timing-function: ease;
+}
+@keyframes bounce-8 {
+        0%   { transform: translateY(0); }
+        25%  { transform: translateY(-4px)}
+        50%  { transform: translateY(-7px); }
+        75%  { transform: translateY(-4px);}
+        100% { transform: translateY(0); }
+}
+
+.menu__title--top {
+    margin: 80px auto 50px auto;
+    font-size: 2em;
+}
+
+.menu__title, .menu__titleB, .menu__titleC, .menu__titleD {
+    text-align: center;
+    margin: 0 10px 4% 10px;
+    font-size: 2em;
+}
+
+.menu__titleB {
+    background: linear-gradient(to right, #d8852e 15%, #905bfd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5% 0 15% 0;
+}
+
+.menu__titleC {
+    background: linear-gradient(to right, #0431df 0%, #0887fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5% 0 15% 0;
+}
+
+.menu__titleD {
+    background: linear-gradient(to right, #3d9339 0%, #bfff7e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5% 0 15% 0;
+}
+
+.title__bottom--music {
+    display: inline-flex;
+    margin: 0 auto 0 30%;
+}
+
+.category__title {
+    margin: 0 25px 0 25px;
     color: inherit;
     text-decoration: none;
-    background: linear-gradient(to top, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
     transition: background-size .9s;
   }
   
-  .menu__title:hover {
+  .category__title:hover {
     background-size: 100% 100%;
   }
 
+.category__title--orange, .liste-orange, .prix_orange  {
+    color: #c67412;
+    margin: 5% 0 8% 0;
+}  
+
+.category__title--purple, .liste-purple, .prix_purple {
+    color: #996699;
+    margin: 5% 0 8% 0;
+}
+
+.category__title--blue, .liste-blue, .prix_blue {
+    color: #6633cc;
+    margin: 5% 0 8% 0;
+}
+
+.category__title--orange, .category__title--purple, .category__title--blue {
+    font-size: 1.3em;
+}
 
 .bottom__title {
-    margin-top: 10%;
     text-align: center;
+    margin: 0 auto 0 15px;
 }
 
 .menu, .menu1, .menu2, .menu3, .menu4 {
@@ -329,36 +445,73 @@ section {
     }
 }
 
+.menu2 {
+   h3 {
+       margin: 0 25px 0 25px;
+   } 
+}
+
 .feuille {
     display: flex;
-    width: 100%;
-    margin: 0 auto 0 0;
+    justify-content: space-between;
+    margin: 0 0 6% -40px;
     text-align: center;
+    line-height: 2em;
+}
+
+.feuilleB {
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+    text-align: center;
+    .liste-g, .prixB {
+        line-height: 2.5em;
+    }
 }
 
 .prix {
     text-align: right;
-    margin: 0 0 0 auto;
 }
 
-.liste-g {
-    margin: 0 auto 0 -40px;
-    text-align: left;
-    
+.prixB {
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+.prix_orange, .prix_purple {
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+
+.liste-g, .liste-orange, .liste-purple, .liste-blue {    
+    text-align: left;        
+}
+
+.liste-orange, .liste-purple, .liste-blue, .prix_orange, .prix_purple {
+    line-height: 3em;
 }
 
 .trait__title {
     display: flex;
     width: 100%;
     margin: 0 auto 0 auto;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
+
 
 .trait {
     width: 200px;
     margin: auto 0 auto 0;
 }
+
+.trait__right {
+    width: 200px;
+    margin: auto 0 auto 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 
 .musicalnote {
     width: 15%;
@@ -391,6 +544,7 @@ section {
 
 .menu4 {
     font-family: kaushan;
+    font-size: 1.1em;
 }
 
 .trait2.png {
@@ -400,6 +554,11 @@ section {
 .musicalnote__index {
     width: 85px;
     margin: 0 auto 0 auto;
+}
+
+.musicalnote--bottom {
+    width: 45px;
+    height: 35px;
 }
 
 @media all and (max-width: 800px)
