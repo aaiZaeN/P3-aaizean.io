@@ -107,6 +107,10 @@ h1 {
     font-family: $title-font;
     font-size: 4.5rem;
     letter-spacing: -3px;
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
 }
 
 span {
@@ -151,22 +155,64 @@ section {
 }
 
 .btn {
-    width: auto;
-    height: auto;
     border-radius: 15px;
     background-color: $primary-color;
-    margin: 0 auto 50px auto;
-    padding: 0 45px 0 45px;
+    padding: 15px 15px;
     font-family: $primary-font;
     font-size: 1.5rem;
-    .btn--comingsoon {
-        text-align: center;
-        vertical-align: center;
-        color: $text-color;
-    }
+    color: $text-color;
+    margin: 0 auto 0 auto;
+
+        &:hover .pointA, &:hover .pointC, &:hover .pointB { 
+            display: inline-block;  
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
 }
 
-.menu__title {
+.bounce-6 {
+    animation-name: bounce-6;
+    animation-timing-function: ease;
+}
+@keyframes bounce-6 {
+        0%   { transform: translateY(-7px); }
+        25%  { transform: translateY(-4px)}
+        50%  { transform: translateY(0); }
+        75%  { transform: translateY(-4px);}
+        100% { transform: translateY(-7px); }
+}
+
+.bounce-7 {
+    animation-name: bounce-7;
+    animation-timing-function: ease;
+}
+@keyframes bounce-7 {
+        0%   { transform: translateY(-4px); }
+        25%  { transform: translateY(-7px)}
+        50%  { transform: translateY(-4px); }
+        75%  { transform: translateY(0);}
+        100% { transform: translateY(-4px); }
+}
+
+.bounce-8 {
+    animation-name: bounce-8;
+    animation-timing-function: ease;
+}
+@keyframes bounce-8 {
+        0%   { transform: translateY(0); }
+        25%  { transform: translateY(-4px)}
+        50%  { transform: translateY(-7px); }
+        75%  { transform: translateY(-4px);}
+        100% { transform: translateY(0); }
+}
+
+.menu__title--top {
+    margin: 80px auto 50px auto;
+    font-size: 2em;
+}
+
+.menu__title, .menu__titleB, .menu__titleC, .menu__titleD {
     text-align: center;
 }
 
