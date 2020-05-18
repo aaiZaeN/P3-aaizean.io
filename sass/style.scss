@@ -1,53 +1,65 @@
+/*Font*/
 @font-face {
     font-family: 'metropolis_bold';
-    src: url('Metropolis-Bold.otf');
+    src: url('font/Metropolis-Bold.otf');
 }
 @font-face {
     font-family: 'metropolis';
-    src: url('Metropolis-Regular.otf');
+    src: url('font/Metropolis-Regular.otf');
 }
 @font-face {
     font-family: 'devonshire';
-    src: url('Devonshire-Regular.ttf')
+    src: url('font/Devonshire-Regular.ttf')
 }
 @font-face {
     font-family: 'croissantOne';
-    src: url('CroissantOne-Regular.ttf')
+    src: url('font/CroissantOne-Regular.ttf')
 }
 @font-face {
     font-family: 'kaushan';
-    src: url('KaushanScript-Regular.ttf');
+    src: url('font/KaushanScript-Regular.ttf');
 }
 @font-face {
     font-family: 'dancing';
-    src: url('DancingScript-VariableFont_wght.ttf');
+    src: url('font/DancingScript-VariableFont_wght.ttf');
 }
 @font-face {
     font-family: 'letters';
-    src: url('Letters for Learners.ttf');
+    src: url('font/Letters for Learners.ttf');
 }
 
+/*IMPORTS*/
 
+@import "libs/responsive.scss";
+@import "libs/color.scss";
+
+/*VARIABLES POLICES*/
 
 $title-font: metropolis_bold;
 $primary-font: metropolis;
 
-$primary-color: #579c87;
-$text-color : #fdcb46;
+/*STRUCTURE*/
 
-body {
-    position: relative;
+header {    
     width: auto;
-    margin: auto;
-    width: 100%;
-}
-
-header {
-    display: block;
-    width: 100%;
     padding: 2% 0 2% 0;
     margin: auto;
     background-color: $primary-color;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 5%;
+}
+
+.main {
+    display: grid;
+    height: auto;
 }
 
 footer {
@@ -69,11 +81,33 @@ footer {
     }
 }
 
-.footer__legal {
+
+
+/*TITRE*/
+
+h1 {
+    color: $text-color;
+    text-align: center;
+    font-family: $title-font;
+    font-size: 4.5rem;
+    letter-spacing: -3px;
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+}
+
+/*FOOTER*/
+
+.footerLegal {
     margin: auto 0 auto 3%;
 } 
 
-.footer__legal:hover, .footer__contact:hover {
+.footerContact {
+    margin: auto 3% auto 0;
+}
+
+.footerLegal:hover, .footerContact:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
@@ -98,57 +132,43 @@ footer {
     }
   }
 
-.footer__contact {
-    margin: auto 3% auto 0;
-}
-
-h1 {
-    color: $text-color;
-    text-align: center;
-    font-family: $title-font;
-    font-size: 4.5rem;
-    letter-spacing: -3px;
-    a {
-        text-decoration: none;
-        color: $text-color;
-    }
-}
-
 span {
     color: $text-color;
 }
 
-section {
-    margin-bottom: 5%;
-}
+/*BODY*/
 
-.main {
-    display: grid;
-    height: auto;
-}
+/*RESTAURANTS ACCUEIL*/
 
 .restaurants {
     display: grid;
-    width: 1000px;
+    width: auto;
     margin: 45px auto 0 auto;
     grid-template-columns: 50% 50%;     
 }
 
-.restaurant__indexA, .restaurant__indexB, .restaurant__indexC, .restaurant__indexD {
+.restaurantA, .restaurantB, .restaurantC, .restaurantD {
     display: block;
     width: 400px;
     height: 500px;
-    box-shadow: 0px 0px 5px 5px #cccccc;
-    margin: 0 auto 85px auto;
+    box-shadow: 0px 0px 5px 5px $shadow;
+    margin: 0 25px 85px 25px;
     -webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;  
 }
 
-.restaurant__indexA {
-    background-color: #FCDFDB;
-    &.restaurant__indexA:hover {
+.musicalnoteIndex {
+    width: 85px;
+    margin: 0 auto 0 auto;
+}
+
+/*LA NOTE ENCHANTEE*/
+
+.restaurantA {
+    background-color: $menuA-background;
+    &.restaurantA:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     opacity: .7;
@@ -156,47 +176,19 @@ section {
     }
 }
 
-.restaurant__indexB {
-    background-color: #fff5fe;
-    &.restaurant__indexB:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity: .7;
-    cursor: pointer;
-    }
-}
-
-.restaurant__indexC {
-    background-color: #eceeee;
-    &.restaurant__indexC:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity: .7;
-    cursor: pointer;
-    }
-}
-
-.restaurant__indexD:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity: .7;
-    cursor: pointer;
-}
-
-
-.indexA__name {
-    color: #582F34;
+.indexAname {
+    color: $colormenuA;
     font-size: 3em;
     font-family: devonshire;
 }
 
-.indexA__menu {
-    color: #582F34;
+.indexAmenu {
+    color: $colormenuA;
     font-size: 3em;
     font-family: letters;
 }
 
-.bloc__indexA {
+.blocIndexA {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -206,7 +198,20 @@ section {
     }  
 }
 
-.indexB__name {
+
+/*LE CHIC A LA FRANCAISE*/
+
+.restaurantB {
+    background-color: $menuB-background;
+    &.restaurantB:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: .7;
+    cursor: pointer;
+    }
+}
+
+.indexBname {
     color: #582F34;
     font-size: 1.8em;
     font-family: croissantOne;
@@ -216,13 +221,13 @@ section {
 }
   
 
-.indexB__menu {
-    color: #cc6600;
+.indexBmenu {
+    color: $colormenuB;
     font-size: 3em;
     font-family: letters;
 }
 
-.bloc__indexB {
+.blocIndexB {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -232,7 +237,19 @@ section {
     }     
 }
 
-.indexC__name {
+/*LE DELICE DES PAPILLES*/
+
+.restaurantC {
+    background-color: $menuC-background;
+    &.restaurantC:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: .7;
+    cursor: pointer;
+    }
+}
+
+.indexCname {
     color: #582F34;
     font-size: 2.5em;
     font-family: dancing;
@@ -241,13 +258,13 @@ section {
     -webkit-text-fill-color: transparent;
 }
 
-.indexC__menu {
-    color: #0887fb;
+.indexCmenu {
+    color: $colormenuC;
     font-size: 3em;
     font-family: letters;
 }
 
-.bloc__indexC {
+.blocIndexC {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -257,7 +274,19 @@ section {
     }   
 }
 
-.indexD__name {
+/*LA PALETTE DU GOÛT*/
+
+.restaurantD:hover {
+    background-color: $menuD-background;
+    &.restaurantD:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: .7;
+    cursor: pointer;
+    }
+}
+
+.indexDname {
     color: #582F34;
     font-size: 2.5em;
     font-family: kaushan;
@@ -266,13 +295,13 @@ section {
     -webkit-text-fill-color: transparent;
 }
 
-.indexD__menu {
-    color: #72bf56;
+.indexDmenu {
+    color: $colormenuD;
     font-size: 3em;
     font-family: letters;
 }
 
-.bloc__indexD {
+.blocIndexD {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -281,6 +310,8 @@ section {
         text-decoration: none;
     }    
 }
+
+/*BOUTON PROCHAINEMENT*/
 
 .btn {
     border-radius: 15px;
@@ -335,97 +366,42 @@ section {
         100% { transform: translateY(0); }
 }
 
-.menu__title--top {
+/*MENUS*/
+
+.menuTitletop {
     margin: 80px auto 50px auto;
     font-size: 2em;
 }
 
-.menu__title, .menu__titleB, .menu__titleC, .menu__titleD {
+.menuTitle, .menuTitleB, .menuTitleC, .menuTitleD {
     text-align: center;
     margin: 0 10px 4% 10px;
     font-size: 2em;
 }
 
-.menu__titleB {
-    background: linear-gradient(to right, #d8852e 15%, #905bfd 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 5% 0 15% 0;
-}
-
-.menu__titleC {
-    background: linear-gradient(to right, #0431df 0%, #0887fb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 5% 0 15% 0;
-}
-
-.menu__titleD {
-    background: linear-gradient(to right, #3d9339 0%, #bfff7e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 5% 0 15% 0;
-}
-
-.title__bottom--music {
-    display: inline-flex;
-    margin: 0 auto 0 30%;
-}
-
-.category__title, .category__title--orange, .category__title--purple, .category__title--blue {
+.categoryTitle, .categoryTitle-orange, .categoryTitle-purple, .categoryTitle-blue {
     margin: 0 25px 0 25px;
     color: inherit;
     text-decoration: none;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
     transition: background-size .9s;
-  }
-  
-  .category__title:hover, .category__title--orange:hover, .category__title--purple:hover, .category__title--blue:hover {
+}
+
+.categoryTitle:hover, .categoryTitle-orange:hover, .categoryTitle-purple:hover, .categoryTitle-blue:hover {
     background-size: 100% 100%;
-  }
-
-.category__title--orange, .liste-orange, .prix_orange  {
-    color: #c67412;
-    margin: 5% 0 8% 0;
-}  
-
-.category__title--purple, .liste-purple, .prix_purple {
-    color: #996699;
-    margin: 5% 0 8% 0;
-}
-
-.category__title--blue, .liste-blue, .prix_blue {
-    color: #6633cc;
-    margin: 5% 0 8% 0;
-}
-
-.category__title--orange, .category__title--purple, .category__title--blue {
-    font-size: 1.3em;
-}
-
-.bottom__title {
-    text-align: center;
-    margin: 0 auto 0 15px;
 }
 
 .menu, .menu1, .menu2, .menu3, .menu4 {
-    width: auto;
     margin: auto auto auto auto;
     padding: 5% 7% 5% 7%;
-    box-shadow: 0px 0px 5px 5px #cccccc;
+    box-shadow: 0px 0px 5px 5px $shadow;
     text-align: left;
     li {
         list-style: none;
     }
 }
 
-.menu2 {
-   h3 {
-       margin: 0 25px 0 25px;
-   } 
-}
-
-.feuille {
+.restaurantMenu, .restaurantMenuBottom {
     display: flex;
     justify-content: space-between;
     margin: 0 0 6% -40px;
@@ -433,40 +409,11 @@ section {
     line-height: 2em;
 }
 
-.feuilleB {
-    display: flex;
-    width: 100%;
-    margin-top: 3%;
-    text-align: center;
-    .liste-g, .prixB {
-        line-height: 2.5em;
-    }
+.restaurantMenuresponsive, .restaurantMenuB-responsive {
+    display: none;
 }
 
-.prix {
-    text-align: right;
-}
-
-.prixB {
-    margin-left: auto;
-    padding-right: 40px;
-}
-
-.prix_orange, .prix_purple {
-    margin-left: auto;
-    padding-right: 40px;
-}
-
-
-.liste-g, .liste-orange, .liste-purple, .liste-blue {    
-    text-align: left;        
-}
-
-.liste-orange, .liste-purple, .liste-blue, .prix_orange, .prix_purple {
-    line-height: 3em;
-}
-
-.trait__title {
+.traitTitle {
     display: flex;
     width: 100%;
     margin: 0 auto 0 auto;
@@ -479,68 +426,287 @@ section {
     margin: auto 0 auto 0;
 }
 
-.trait__right {
+.traitRight {
     width: 200px;
     margin: auto 0 auto 0;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 
+.leftList, .listOrange, .listPurple, .listBlue {    
+    text-align: left;        
+}
+
+/*MENU - La note enchantée*/
+
+.menu1 {
+    font-family: devonshire;
+    font-size: 1.5em;
+    background-color: $menuA-background;
+    color: #582F34;
+}
+
+.titleBottommusic {
+    display: inline-flex;
+    margin: 0 auto 0 30%;
+}
+
+.bottomTitle {
+    text-align: center;
+    margin: 0 auto 0 15px;
+}
 
 .musicalnote {
     width: 15%;
     margin: 0 auto 0 41%;
 }
 
-.image--1 {
-    display: block;
-    
+.musicalNotebottom {
+    width: 45px;
+    height: 35px;
 }
-
-.menu1 {
-    font-family: devonshire;
-    font-size: 1.5em;
-    background-color: #FCDFDB;
-    color: #582F34;
-}
+/*MENU - Le chic à la française*/
 
 .menu2 {
     font-family: croissantOne;
-    background-color: #fff5fe;
+    background-color: $menuB-background;
     color: repeating-linear-gradient(red, yellow 10%, green 20%);
 }
+
+.menuTitleB {
+    background: linear-gradient(to right, #d8852e 15%, #905bfd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5% 0 15% 0;
+}
+
+.categoryTitle-orange, .listOrange, .priceOrange  {
+    color: $menuB-top;
+}  
+
+.categoryTitle-purple, .listPurple, .pricePurple {
+    color: $menuB-middle;
+}
+
+.categoryTitle-blue, .listBlue, .priceBlue {
+    color: $menuB-bottom;
+}
+
+.categoryTitle-orange, .categoryTitle-purple, .categoryTitle-blue {
+    font-size: 1.3em;
+}
+
+.restaurantMenuB, .restaurantMenuBottomB {
+    display: flex;
+    width: 100%;
+    margin-top: 3%;
+    text-align: center;
+    .leftList, .priceB {
+        line-height: 2.5em;
+    }
+}
+
+
+.priceOrange, .pricePurple {
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+.listOrange, .listPurple, .listBlue, .priceOrange, .pricePurple {
+    line-height: 3em;
+}
+
+
+/*MENU - Le délice des papilles*/
 
 .menu3 {
     font-family: dancing;
     font-size: 1.5em;
-    background-color: #eceeee;
+    background-color: $menuC-background;
 }
 
+.menuTitleC {
+    background: linear-gradient(to right, #0431df 0%, #0887fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5% 0 15% 0;
+}
+
+/*MENU - La palette du goût*/
+
 .menu4 {
+    background-color: $menuD-background;
     font-family: kaushan;
     font-size: 1.1em;
 }
 
-.trait2.png {
-    color: rgba(255, 0, 0, 0.5);
+.menuTitleD {
+    background: linear-gradient(to right, #3d9339 0%, #bfff7e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5% 0 15% 0;
 }
 
-.musicalnote__index {
-    width: 85px;
-    margin: 0 auto 0 auto;
+.price {
+    text-align: right;
 }
 
-.musicalnote--bottom {
-    width: 45px;
-    height: 35px;
+.priceB {
+    margin-left: auto;
+    padding-right: 40px;
 }
 
-@media all and (max-width: 800px)
-{
+/*MENTTION LEGALE*/
+
+.inDevelopment {
+    display: block;
+    margin: 10% auto 0 auto;
+    font-size: 3rem;
+    color: $primary-color;
+    text-align: center;
+}
+
+/*##  RESPONSIVE  ##*/
+
+@media #{$medium-up} {
+    /*INDEX*/
     .restaurants {
         width: auto;
         display: flex;
         flex-direction: column;
-        margin: 50px auto 50px auto;
+        margin: 50px auto 0 auto;
+    }
+
+    .btn {
+        margin-bottom: 10%;
+    }
+    /*Menus*/
+    .restaurantMenu, .restaurantMenuB {
+        display: none;
+    }
+    .restaurantMenuresponsive, .restaurantMenuB-responsive, .restaurantMenuBottom, .restaurantMenuBottomB {
+        display: flex;
+        margin: 0 auto 0 auto; 
+    }
+    .priceResponsive {
+        width: 100px;
+        text-align: center;
+        margin: 0 auto 0 auto;
+        border: 1px solid grey;
+    }
+    .circle {
+        border-radius: 100%;        
+    }
+    .categoryTitle, .categoryTitle-orange, .categoryTitle-purple, .categoryTitle-blue {
+        margin: 0 auto 0 auto;
+        color: inherit;
+        text-decoration: none;
+        background: none;
+        transition: none;
+      }
+    
+}
+
+@media #{$little, $little-up} {
+    /*INDEX*/
+    .restaurants {
+        width: 100%;
+    }
+    .restaurantA, .restaurantB, .restaurantC, .restaurantD {
+        display: block;
+        width: 80%;
+        height: auto;    
+        padding: 0 15px; 
+        margin: 10% auto 10% auto;
+    }
+    .btn {
+        font-size: 1.2rem;
+        margin-bottom: 20%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    footer {
+        font-size: 1.1rem;
+    }
+    .indexAname, .indexAmenu, .indexBname, .indexBmenu, .indexCname, .indexCmenu, .indexDname, .indexDmenu {
+        font-size: 2rem;
+        padding-bottom: 30%;
+    } 
+    /*MENUS*/
+    .menu1, .menu2, .menu3, .menu4 {
+        box-shadow: none;
+    }
+    .musicalnote {
+        margin-top: 25px;
+    }
+    .menuTitle {
+        margin: 0;
+    }
+    .categoryTitle {
+        margin: 50px auto 15px auto;
+        border-bottom: 1px solid black;
+    }
+    .categoryTitle-orange, .categoryTitle-purple, .categoryTitle-blue {
+        text-align: center;
+        text-decoration: underline;
+    }
+    .categoryTitle-orange {
+        color: $menuB-top;
+    }
+    .categoryTitle-purple{
+        color: $menuB-middle;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .categoryTitle-blue{
+        color: $menuB-bottom;
+    }
+    .priceResponsive-orange {
+        width: 100px;
+        border: 1px solid $menuB-top;
+        margin: 10px auto 25px auto;
+    }
+    .priceResponsive-purple {
+        width: 100px;
+        border: 1px solid $menuB-middle;
+        margin: 10px auto 25px auto;
+    }
+    .priceBlue {
+        width: 100px;
+        border: 1px solid $menuB-bottom;
+        margin: 0 auto 0 auto;
+    }
+    .trait, .traitRight {
+        display: none;
+    }
+    .main {
+        width: auto;
+    }
+    .priceResponsive {
+        margin: 10px auto 10px auto;
+    }
+    ul {
+        padding-inline-start: 0px;
+    li {
+        text-align: center;
+        margin: 25px 0 25px 0;
+    }
+    }
+    .titleBottommusic {
+        display: inline-flex;
+        margin: 0 auto 0 auto;
+        .bottomTitle {
+            margin-left: 25px;
+        }
+    }
+    .inDevelopment {
+        display: block;
+        margin: 50% auto auto auto;
+        font-size: 2rem;
+    }
+    .leftList-responsive {
+        width: 100%;
     }
 }
