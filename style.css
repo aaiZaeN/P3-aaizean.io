@@ -473,7 +473,6 @@ span {
 .menu2 {
   font-family: croissantOne;
   background-color: #fff5fe;
-  color: repeating-linear-gradient(red, yellow 10%, green 20%);
 }
 
 .menuTitleB {
@@ -706,9 +705,6 @@ span {
     margin: 10px auto 10px auto;
   }
 
-  ul {
-    padding-inline-start: 0px;
-  }
   ul li {
     text-align: center;
     margin: 25px 0 25px 0;
