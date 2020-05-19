@@ -409,7 +409,7 @@ span {
 .restaurantMenu, .restaurantMenuBottom {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 6% -40px;
+  margin: 0 0 6% 0;
   text-align: center;
   line-height: 2em;
 }
@@ -435,6 +435,10 @@ span {
   margin: auto 0 auto 0;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+}
+
+.leftList {
+  margin-left: -40px;
 }
 
 .leftList, .listOrange, .listPurple, .listBlue {
@@ -551,7 +555,6 @@ span {
 
 .priceB {
   margin-left: auto;
-  padding-right: 40px;
 }
 
 /*MENTTION LEGALE*/
@@ -564,7 +567,19 @@ span {
 }
 
 /*##  RESPONSIVE  ##*/
-@media only screen and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto 0 auto;
+  }
+
+  .btn {
+    margin-bottom: 5%;
+  }
+}
+@media all and (max-width: 767px) {
   /*INDEX*/
   .restaurants {
     width: auto;
@@ -585,6 +600,7 @@ span {
   .restaurantMenuresponsive, .restaurantMenuB-responsive, .restaurantMenuBottom, .restaurantMenuBottomB {
     display: flex;
     margin: 0 auto 0 auto;
+    text-align: center;
   }
 
   .priceResponsive {
@@ -604,6 +620,15 @@ span {
     text-decoration: none;
     background: none;
     transition: none;
+  }
+
+  .leftList-responsive {
+    width: 100%;
+    margin: 3% auto 3% auto;
+  }
+  .leftList-responsive li {
+    text-align: center;
+    margin: 2% auto 2% auto;
   }
 }
 @media all and (max-width: 575px), all and (max-width: 375px) {
@@ -726,6 +751,15 @@ span {
 
   .leftList-responsive {
     width: 100%;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .leftList {
+    margin-left: 0;
   }
 }
 

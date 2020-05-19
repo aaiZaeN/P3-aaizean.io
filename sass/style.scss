@@ -311,6 +311,8 @@ span {
     }    
 }
 
+
+
 /*BOUTON PROCHAINEMENT*/
 
 .btn {
@@ -404,7 +406,7 @@ span {
 .restaurantMenu, .restaurantMenuBottom {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 6% -40px;
+    margin: 0 0 6% 0;
     text-align: center;
     line-height: 2em;
 }
@@ -432,10 +434,13 @@ span {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
-
+.leftList {
+    margin-left: -40px;
+}
 .leftList, .listOrange, .listPurple, .listBlue {    
     text-align: left;        
 }
+
 
 /*MENU - La note enchantée*/
 
@@ -552,7 +557,6 @@ span {
 
 .priceB {
     margin-left: auto;
-    padding-right: 40px;
 }
 
 /*MENTTION LEGALE*/
@@ -566,6 +570,17 @@ span {
 }
 
 /*##  RESPONSIVE  ##*/
+@media #{$medium}{
+    .restaurants {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 50px auto 0 auto;
+    }
+    .btn {
+        margin-bottom: 5%;
+    }
+}
 
 @media #{$medium-up} {
     /*INDEX*/
@@ -575,7 +590,6 @@ span {
         flex-direction: column;
         margin: 50px auto 0 auto;
     }
-
     .btn {
         margin-bottom: 10%;
     }
@@ -586,6 +600,7 @@ span {
     .restaurantMenuresponsive, .restaurantMenuB-responsive, .restaurantMenuBottom, .restaurantMenuBottomB {
         display: flex;
         margin: 0 auto 0 auto; 
+        text-align: center;
     }
     .priceResponsive {
         width: 100px;
@@ -603,7 +618,14 @@ span {
         background: none;
         transition: none;
       }
-    
+    .leftList-responsive {
+        width: 100%;
+        margin: 3% auto 3% auto;
+        li {
+            text-align: center;
+            margin: 2% auto 2% auto;
+        }
+    } 
 }
 
 @media #{$little, $little-up} {
@@ -704,5 +726,12 @@ span {
     }
     .leftList-responsive {
         width: 100%;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    .leftList {
+        margin-left: 0;
     }
 }
