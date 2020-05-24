@@ -47,11 +47,8 @@ body {
   margin: auto;
 }
 
-section {
+main {
   margin-bottom: 5%;
-}
-
-.main {
   display: grid;
   height: auto;
 }
@@ -130,33 +127,70 @@ span {
   margin: 45px auto 0 auto;
   grid-template-columns: 50% 50%;
 }
+.restaurants a:hover .blocIndex {
+  -webkit-transform: scale(1.1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+  opacity: 0.7;
+  cursor: pointer;
+}
+.restaurants a {
+  text-decoration: none;
+  margin: 0 25px 85px 25px;
+}
 
 .restaurantA, .restaurantB, .restaurantC, .restaurantD {
   display: block;
   width: 400px;
   height: 500px;
   box-shadow: 0px 0px 5px 5px #cccccc;
-  margin: 0 25px 85px 25px;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
 }
 
+.indexMenu {
+  font-size: 3em;
+  font-family: letters;
+}
+
+.indexAmenu {
+  color: #582F34;
+}
+
+.indexBmenu {
+  color: #cc6600;
+}
+
+.indexCmenu {
+  color: #0887fb;
+}
+
+.indexDmenu {
+  color: #72bf56;
+}
+
+.blocIndex {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.blocIndexA {
+  padding-top: 85px;
+}
+
+.indexCname, .indexDname {
+  font-size: 2.5em;
+}
+
+/*LA NOTE ENCHANTEE*/
 .musicalnoteIndex {
   width: 85px;
   margin: 0 auto 0 auto;
 }
 
-/*LA NOTE ENCHANTEE*/
 .restaurantA {
   background-color: #FCDFDB;
-}
-.restaurantA.restaurantA:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 .indexAname {
@@ -165,35 +199,12 @@ span {
   font-family: devonshire;
 }
 
-.indexAmenu {
-  color: #582F34;
-  font-size: 3em;
-  font-family: letters;
-}
-
-.blocIndexA {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 85px;
-}
-.blocIndexA a {
-  text-decoration: none;
-}
-
 /*LE CHIC A LA FRANCAISE*/
 .restaurantB {
   background-color: #fff5fe;
 }
-.restaurantB.restaurantB:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  opacity: 0.7;
-  cursor: pointer;
-}
 
 .indexBname {
-  color: #582F34;
   font-size: 1.8em;
   font-family: croissantOne;
   background: linear-gradient(to right, #d8852e 0%, #905bfd 100%);
@@ -201,92 +212,28 @@ span {
   -webkit-text-fill-color: transparent;
 }
 
-.indexBmenu {
-  color: #cc6600;
-  font-size: 3em;
-  font-family: letters;
-}
-
-.blocIndexB {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 150px;
-}
-.blocIndexB a {
-  text-decoration: none;
-}
-
 /*LE DELICE DES PAPILLES*/
 .restaurantC {
   background-color: #eceeee;
 }
-.restaurantC.restaurantC:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  opacity: 0.7;
-  cursor: pointer;
-}
 
 .indexCname {
-  color: #582F34;
-  font-size: 2.5em;
   font-family: dancing;
   background: linear-gradient(to right, #0431df 0%, #0887fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.indexCmenu {
-  color: #0887fb;
-  font-size: 3em;
-  font-family: letters;
-}
-
-.blocIndexC {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 150px;
-}
-.blocIndexC a {
-  text-decoration: none;
-}
-
 /*LA PALETTE DU GOÛT*/
-.restaurantD:hover {
+.restaurantD {
   background-color: #FFFF;
-}
-.restaurantD:hover.restaurantD:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 .indexDname {
-  color: #582F34;
-  font-size: 2.5em;
   font-family: kaushan;
   background: linear-gradient(to right, #3d9339 0%, #bfff7e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.indexDmenu {
-  color: #72bf56;
-  font-size: 3em;
-  font-family: letters;
-}
-
-.blocIndexD {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 150px;
-}
-.blocIndexD a {
-  text-decoration: none;
 }
 
 /*BOUTON PROCHAINEMENT*/
@@ -306,9 +253,12 @@ span {
   transform-origin: bottom;
 }
 
+.bounce-6, .bounce-7, .bounce-8 {
+  animation-timing-function: ease;
+}
+
 .bounce-6 {
   animation-name: bounce-6;
-  animation-timing-function: ease;
 }
 
 @keyframes bounce-6 {
@@ -330,7 +280,6 @@ span {
 }
 .bounce-7 {
   animation-name: bounce-7;
-  animation-timing-function: ease;
 }
 
 @keyframes bounce-7 {
@@ -352,7 +301,6 @@ span {
 }
 .bounce-8 {
   animation-name: bounce-8;
-  animation-timing-function: ease;
 }
 
 @keyframes bounce-8 {
